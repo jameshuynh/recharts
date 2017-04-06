@@ -152,7 +152,7 @@ class Radar extends Component {
         textAnchor: 'middle',
         ...baseProps,
         stroke: 'none',
-        fill: (baseProps && baseProps.stroke) || '#666',
+        fill: '#969696',
         ...customLabelProps,
         ...entry,
         index: i,

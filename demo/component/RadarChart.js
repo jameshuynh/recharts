@@ -46,7 +46,7 @@ class RadarChartDemo extends React.Component {
         <br/>
         <p>A simple RadarChart</p>
         <RadarChart cx={300} cy={250} outerRadius={150} width={600} height={500} data={data}>
-          <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+          <Radar name="Mike" dataKey="A" stroke="#E52389" fill="#E52389" fillOpacity={0.2} />
           <PolarGrid />
           <PolarAngleAxis dataKey="subject" />
         </RadarChart>
@@ -84,11 +84,10 @@ class RadarChartDemo extends React.Component {
         <div style={{ width: '100%', height: '100%' }}>
           <ResponsiveContainer>
             <RadarChart data={data}>
-              <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+              <Radar name="Mike" dataKey="A" stroke="#E52389" fill="#E52389" fillOpacity={0.2} />
               <PolarGrid />
               <PolarAngleAxis dataKey="subject" />
               <PolarRadiusAxis />
-              <Tooltip />
             </RadarChart>
           </ResponsiveContainer>
         </div>

@@ -37,14 +37,33 @@ class Polygon extends Component {
     if (!points || !points.length) { return null; }
 
     const layerClass = classNames('recharts-polygon', className);
+    const svgPoints = [];
+    if (layerClass.indexOf('recharts-polar-angle-axis') === -1) {
+      for (let i = 0; i < points.length; i++) {
+        svgPoints.push(
+          <circle
+            cx={points[i].x}
+            cy={points[i].y}
+            r={6}
+            stroke="#E0E0E0"
+            strokeWidth="4"
+            fill="#E52389"
+          />
+        );
+      }
+    }
 
     return (
-      <polygon
-        {...getPresentationAttributes(this.props)}
-        {...filterEventAttributes(this.props)}
-        className={layerClass}
-        points={getPolygonPoints(points)}
-      />
+      <g>
+
+        {svgPoints}
+        <polygon
+          {...getPresentationAttributes(this.props)}
+          {...filterEventAttributes(this.props)}
+          className={layerClass}
+          points={getPolygonPoints(points)}
+        />
+      </g>
     );
   }
 }

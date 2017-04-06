@@ -149,11 +149,13 @@ class PolarGrid extends Component {
     return (
       <g className="recharts-polar-grid-concentric">
         {
-          polarRadius.map((entry, i) => (
-            gridType === 'circle' ?
-              this.renderConcentricCircle(entry, i) :
-              this.renderConcentricPolygon(entry, i)
-          ))
+          polarRadius.map((entry, i) => {
+            if (i === 0 || i === 1 || i === polarRadius.length - 1) {
+              return gridType === 'circle' ?
+                this.renderConcentricCircle(entry, i) :
+                this.renderConcentricPolygon(entry, i)
+            }
+          })
         }
       </g>
     );

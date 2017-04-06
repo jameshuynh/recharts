@@ -64,7 +64,7 @@ class PolarAngleAxis extends Component {
    */
   getTickLineCoord(data) {
     const { cx, cy, radius, orientation, tickLine } = this.props;
-    const tickLineSize = (tickLine && tickLine.size) || 8;
+    const tickLineSize = (tickLine && tickLine.size) || 20;
     const p1 = polarToCartesian(cx, cy, radius, data.angle);
     const p2 = polarToCartesian(
       cx, cy,
@@ -130,6 +130,8 @@ class PolarAngleAxis extends Component {
       tickItem = (
         <Text
           {...props}
+          fill="#979797"
+          fontFamily="Helvetica"
           className="recharts-polar-angle-axis-tick-value"
         >
           {value}

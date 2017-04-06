@@ -212,7 +212,6 @@ class PolarRadiusAxis extends Component {
     return (
       <Layer className="recharts-polar-radius-axis">
         {axisLine && this.renderAxisLine()}
-        {tick && this.renderTicks()}
         {this.renderLabel()}
       </Layer>
     );
