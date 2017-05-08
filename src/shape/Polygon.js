@@ -47,7 +47,7 @@ class Polygon extends Component {
             r={6}
             stroke="#E0E0E0"
             strokeWidth="4"
-            fill="#E52389"
+            fill="#F39C12"
           />
         );
       }
